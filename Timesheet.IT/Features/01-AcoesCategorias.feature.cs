@@ -179,33 +179,43 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Id",
                             "Titulo"});
                 table3.AddRow(new string[] {
+                            "1",
                             "teste01"});
                 table3.AddRow(new string[] {
+                            "2",
                             "teste02"});
                 table3.AddRow(new string[] {
+                            "3",
                             "teste03"});
 #line 23
- testRunner.Given("as seguintes informações:", ((string)(null)), table3, "Dados ");
+ testRunner.Given("as seguintes informações para edição por id:", ((string)(null)), table3, "Dados ");
 #line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Id",
                             "Titulo"});
                 table4.AddRow(new string[] {
+                            "1",
                             "teste001"});
 #line 28
- testRunner.When("editar a categoria", ((string)(null)), table4, "Quando ");
+ testRunner.When("editar a categoria por id", ((string)(null)), table4, "Quando ");
 #line hidden
                 TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Id",
                             "Titulo"});
                 table5.AddRow(new string[] {
+                            "1",
                             "teste001"});
                 table5.AddRow(new string[] {
+                            "2",
                             "teste02"});
                 table5.AddRow(new string[] {
+                            "3",
                             "teste03"});
 #line 31
- testRunner.Then("devem existir", ((string)(null)), table5, "Entao ");
+ testRunner.Then("devem existir todas as categorias e a editada", ((string)(null)), table5, "Entao ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -243,22 +253,22 @@ this.ScenarioInitialize(scenarioInfo);
                             "ID",
                             "Titulo"});
                 table6.AddRow(new string[] {
-                            "01",
+                            "1",
                             "teste001"});
                 table6.AddRow(new string[] {
-                            "02",
+                            "2",
                             "teste002"});
                 table6.AddRow(new string[] {
-                            "03",
+                            "3",
                             "teste003"});
 #line 38
- testRunner.Given("as seguintes informações:", ((string)(null)), table6, "Dados ");
+ testRunner.Given("as seguintes informações para exclusao por id:", ((string)(null)), table6, "Dados ");
 #line hidden
                 TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                             "ID",
                             "Titulo"});
                 table7.AddRow(new string[] {
-                            "02",
+                            "2",
                             "teste002"});
 #line 43
  testRunner.When("excluir a categoria por id", ((string)(null)), table7, "Quando ");
@@ -267,10 +277,10 @@ this.ScenarioInitialize(scenarioInfo);
                             "ID",
                             "Titulo"});
                 table8.AddRow(new string[] {
-                            "01",
+                            "1",
                             "teste001"});
                 table8.AddRow(new string[] {
-                            "03",
+                            "3",
                             "teste003"});
 #line 46
  testRunner.Then("devem existir apenas os seguintes retornos", ((string)(null)), table8, "Entao ");

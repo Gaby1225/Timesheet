@@ -22,11 +22,10 @@ namespace Timesheet.Data.Categorias
         public async Task<Categoria> Create(Categoria cat) //testar para cadastrar vários de uma vez
         {
             cat.Id = 0;
-            if (cat.Titulo != "")
-            {
-                _appDbContext.Categorias.Add(cat);
-                await _appDbContext.SaveChangesAsync();
-            }
+
+            _appDbContext.Categorias.Add(cat);
+            await _appDbContext.SaveChangesAsync();
+
             return cat;
         }
 

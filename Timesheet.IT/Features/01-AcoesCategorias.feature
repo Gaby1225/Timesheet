@@ -37,16 +37,16 @@ Cenário: 0101 - Editar categorias
 Cenário: 0102 - Excluir categorias
 	Dados as seguintes informações para exclusao por id:
 		| ID | Titulo   |
-		| 01 | teste001 |
-		| 02 | teste002 |
-		| 03 | teste003 |
+		| 1  | teste001 |
+		| 2  | teste002 |
+		| 3  | teste003 |
 	Quando excluir a categoria por id
 		| ID | Titulo   |
-		| 02 | teste002 |
+		| 2  | teste002 |
 	Entao devem existir apenas os seguintes retornos
 		| ID | Titulo   |
-		| 01 | teste001 |
-		| 03 | teste003 |
+		| 1  | teste001 |
+		| 3  | teste003 |
 
 Cenário: 0103 - Consultar todas as categorias
 	Dados as seguintes informações para a consulta de todas as categorias:

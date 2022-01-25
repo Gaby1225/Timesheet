@@ -31,23 +31,35 @@ namespace Timesheet.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Categoria>> Get(int id)
         {
-            var categoria = await _categoriasRepository.Get(id);
-            return Ok(categoria);
+            if (id > 0)
+            {
+                var categoria = await _categoriasRepository.Get(id);
+                return Ok(categoria);
+            }
+            return Ok();
         }
 
         [HttpPost]
         public async Task<IActionResult> Post(Categoria model)
         {
-            var categoria = await _categoriasRepository.Create(model);
-            return Ok(categoria);
+            if (model.Titulo != "")
+            {
+                var categoria = await _categoriasRepository.Create(model);
+                return Ok(categoria);
+            }
+            return Ok();
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(Categoria m, int id)
         {
             m.Id = id;
-            var categoria = await _categoriasRepository.Update(m);
-            return Ok(categoria);
+            if (m.Titulo != "")
+            {
+                var categoria = await _categoriasRepository.Update(m);
+                return Ok(categoria);
+            }
+            return Ok();
         }
 
         [HttpDelete("{id}")]
